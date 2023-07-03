@@ -1,0 +1,271 @@
+:root{
+    --main-color: forestgreen;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.setting-box{
+    position: fixed;
+    left: -200px;
+    top: 0;
+    background-color: #fff;
+    width: 200px;
+    height: 100vh;
+    z-index: 5;
+    transition: 0.3s;
+}
+.setting-box.open{
+    left: 0;
+}
+.setting-box .toggle{
+    background-color: #fff;
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+.setting-box .toggle i{
+    width: 30px;
+    padding: 10px 0;
+}
+.setting-box .option-box{
+    padding: 20px;
+    text-align: center;
+}
+.setting-box .option-box .colors-list{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.setting-box .option-box .colors-list li{
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+    display: inline-block;
+}
+.setting-box .option-box .colors-list li.active{
+    opacity: 1;
+}
+.setting-box .option-box .colors-list li:first-child{
+    background-color: forestgreen;
+}
+.setting-box .option-box .colors-list li:nth-child(2){
+    background-color: blue;
+}
+.setting-box .option-box .colors-list li:nth-child(3){
+    background-color: red;
+}
+.setting-box .option-box .colors-list li:nth-child(4){
+    background-color: orange;
+}
+.setting-box .option-box .colors-list li:nth-child(5){
+    background-color: yellow;
+}
+.setting-box .option-box .yes,
+.setting-box .option-box .no{
+    width: 50px;
+    background-color: #009688;
+    color: #fff;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.landing-page{
+    min-height: 100vh;
+    background-image: url(../images/p1.jfif);
+    background-size: cover;
+}
+.landing-page .overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.header-area{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    padding: 10px;
+}
+.header-area .logo{
+    width: 300px;
+    padding: 15px;
+    font-weight: bold;
+}
+.header-area .links{
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 20px;
+    font-size: 15px;
+}
+.header-area .links li{
+    display: inline-block;
+    margin-left: 25px;
+}
+.header-area .links li a{
+    color: #fff;
+    text-decoration: none;
+}
+.header-area .links li a:hover,
+.header-area .links li a.active{
+    color: var(--main-color);
+    transition: 0.3s;
+}
+.introducation-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 2;
+    text-align: center;
+}
+.introducation-text h1 span{
+    color: var(--main-color);
+}
+.introducation-text p{
+    line-height: 1.5;
+    font-size: 20px;
+}
+.container{
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+.about-us{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+}
+.about-us .info-box{
+    flex: 1;
+    padding: 20px;
+}
+.about-us .info-box h2{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 10px;
+}
+.about-us .info-box p{
+    line-height: 1.8;
+    color: #767676;
+    margin: 0;
+}
+.about-us .img-box{
+    flex: 1;
+    text-align: center;
+
+}
+.about-us .img-box img{
+    width: 450px;
+}
+.skills{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EEE;
+}
+.skills h2{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 50px;
+    text-align: center;
+}
+.skills .skill-box{
+    background-color: #FFF;
+    display: flex;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.skills .skill-box .name{
+    font-weight: bold;  
+    width: 100px;
+    text-align: center;
+}
+.skills .skill-box .progress{
+    height: 30px;
+    width: calc(100% - 110px);
+    background-color: #DDD;
+    position: relative;
+    overflow: hidden;
+}
+.skills .skill-box .progress span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: all 0.5s;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .bin {
+    margin: 100px;
+}
+section h2{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 50px;
+    text-align: center;  
+}
+section .cards{
+    display: flex;   
+}
+section .cards .text-card{
+    background-color: var(--main-color);
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+}
+section .cards .text-card i{
+    font-size: 30px;
+}
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.footer{
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+.footer p{
+    text-align: center;
+}
+.footer .icons a{
+    font-size: 20px;
+    margin: 10px;
+}
